@@ -1,9 +1,365 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Music</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <h1>Jasur</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="hamburg">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div class="logo-play" >
+                    <div class="play-icon">
+                        <i class="fa fa-play-circle" ></i>
+                    </div>
+                    <h1>Music</h1>
+                </div>
+            </div>
+            <div class="search-bar">
+                <div class="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" id="song-name" placeholder="Search song, artist">
+                </div>
+                <div class="user">
+                    <i class="fa fa-rss-square" aria-hidden="true" style="background-color: #fff;"></i>
+                    <button onclick="toggleElement()">J</button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <section class="side-bar">
+            <div class="side-bar-items">
+                <ul>
+                    <li>
+                        <div>
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <a href="#home">Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fa fa-compass" aria-hidden="true"></i>
+                            <a href="#explore">Explore</a>
+                        </div>
+                    </li><li>
+                        <div>
+                            <i class="fa fa-music" aria-hidden="true"></i>
+                            <a href="#Libery">Libery</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="new-playlist">
+                <div class="new-playlist-btn">
+                    <span >+</span>
+                    <button>New playlist</button>
+                </div>
+                <div class="auto-playlist">
+                    <p>Your likes</p>
+                    <i class="fa- fa-thumbtack" style="color: white;"></i>
+                    <small>Auto playlist</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="home" id="home">
+
+            <div class="home-list" >
+                <ul>
+                    <li>
+                        <a href="#">Relax</a>
+                    </li>
+                    <li>
+                        <a href="#">Energize</a>
+                    </li>
+                    <li>
+                        <a href="#">Workout</a>
+                    </li>
+                    <li>
+                        <a href="#">Commute</a>
+                    </li>
+                    <li>
+                        <a href="#">Focus</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="home-intro">
+                <div class="home-user">
+                    <button class="home-user-icon">J</button >
+                    <div>
+                        <p>JASUR HAKIMOV</p>
+                        <h1>Listen again</h1>
+                    </div>
+                </div>
+                <div class="home-swiper-btn">
+                    <div class="more">More</div>
+                    <div>
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="home-container" id="home-container">
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUqwomVyMFsby9zeXLLnkfv744mKCzQDWL7rUDhbwg89bpT-V7qYoW-NNfjFaG3nFcDWu-U49vpUFB_L4njc2GFl6l60Efb4oT-_0e3oi3Dh8nwyLZhG2ciBHGUnRMB_J-D2jQk2Qz_WM4n8A_8b8ZqFDpj80B6KJ9T2bXR7rYcl0M8MaDCsR68.jpg?r=93f"
+                            alt="The Queen's Gambit">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSEl8LWx4tMJIM9Atm3F1Y49Uq6X01tnDe8gPA6d84-gQ767saz9z7Jxj9sFozuI8bcM2vlxeP9IPq3Aa7jxLlkMu8JGjizRLblNEcmD7g-Z2NeZvkvV5nWF9DmJ.jpg?r=393"
+                            alt="Dark">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRItzLGWEqRojd0SS5lkLN56bRwYGctgeybCwPWq-zs_UwEXKX_4CsXsMlWupAdBB5D7KDN-8RzuCvqzTf5Bvo_HQmI.webp?r=3ad"
+                            alt="Suits">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d"
+                            alt="Breaking Bad">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdPrypf33QcVWc0DHxX7rDoTSbX7EgHSJd_VDlwIr81A40ua4l2F_esQS1u4zB9SkN5TAGO1Bw0SmoEqTICKfx9vbRu-qdKh9KGWuRLasXOrCIUpEYnMffVoebRS.jpg?r=d3b"
+                            alt="The Crown">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+            </div>
+
+            <div class="home-intro">
+                <div class="home-user">
+                    <h1>Mixed for you</h1>
+                </div>
+                <div class="home-swiper-btn">
+                    <div class="more">More</div>
+                    <div>
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="home-container">
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUqwomVyMFsby9zeXLLnkfv744mKCzQDWL7rUDhbwg89bpT-V7qYoW-NNfjFaG3nFcDWu-U49vpUFB_L4njc2GFl6l60Efb4oT-_0e3oi3Dh8nwyLZhG2ciBHGUnRMB_J-D2jQk2Qz_WM4n8A_8b8ZqFDpj80B6KJ9T2bXR7rYcl0M8MaDCsR68.jpg?r=93f"
+                            alt="The Queen's Gambit">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSEl8LWx4tMJIM9Atm3F1Y49Uq6X01tnDe8gPA6d84-gQ767saz9z7Jxj9sFozuI8bcM2vlxeP9IPq3Aa7jxLlkMu8JGjizRLblNEcmD7g-Z2NeZvkvV5nWF9DmJ.jpg?r=393"
+                            alt="Dark">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRItzLGWEqRojd0SS5lkLN56bRwYGctgeybCwPWq-zs_UwEXKX_4CsXsMlWupAdBB5D7KDN-8RzuCvqzTf5Bvo_HQmI.webp?r=3ad"
+                            alt="Suits">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d"
+                            alt="Breaking Bad">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdPrypf33QcVWc0DHxX7rDoTSbX7EgHSJd_VDlwIr81A40ua4l2F_esQS1u4zB9SkN5TAGO1Bw0SmoEqTICKfx9vbRu-qdKh9KGWuRLasXOrCIUpEYnMffVoebRS.jpg?r=d3b"
+                            alt="The Crown">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+            </div>
+
+            <div class="home-intro">
+                <div class="home-user">
+                    <h1>New releases</h1>
+                </div>
+                <div class="home-swiper-btn">
+                    <div class="more">More</div>
+                    <div>
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="home-container">
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUqwomVyMFsby9zeXLLnkfv744mKCzQDWL7rUDhbwg89bpT-V7qYoW-NNfjFaG3nFcDWu-U49vpUFB_L4njc2GFl6l60Efb4oT-_0e3oi3Dh8nwyLZhG2ciBHGUnRMB_J-D2jQk2Qz_WM4n8A_8b8ZqFDpj80B6KJ9T2bXR7rYcl0M8MaDCsR68.jpg?r=93f"
+                            alt="The Queen's Gambit">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <img class="card-title_image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSEl8LWx4tMJIM9Atm3F1Y49Uq6X01tnDe8gPA6d84-gQ767saz9z7Jxj9sFozuI8bcM2vlxeP9IPq3Aa7jxLlkMu8JGjizRLblNEcmD7g-Z2NeZvkvV5nWF9DmJ.jpg?r=393"
+                            alt="Dark">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRItzLGWEqRojd0SS5lkLN56bRwYGctgeybCwPWq-zs_UwEXKX_4CsXsMlWupAdBB5D7KDN-8RzuCvqzTf5Bvo_HQmI.webp?r=3ad"
+                            alt="Suits">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d"
+                            alt="Breaking Bad">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+                <div class="card">
+                    <a class="card-title" href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <img class="thumbTile__image"
+                            src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdPrypf33QcVWc0DHxX7rDoTSbX7EgHSJd_VDlwIr81A40ua4l2F_esQS1u4zB9SkN5TAGO1Bw0SmoEqTICKfx9vbRu-qdKh9KGWuRLasXOrCIUpEYnMffVoebRS.jpg?r=d3b"
+                            alt="The Crown">
+                    </a>
+                    <h3>Artistname</h3>
+                    <p>music name</p>
+                </div>
+            </div>
+            
+
+        </section>
+        
+    </main>
+    
+    <div class="accaunt" id="accaunt">
+        <div class="user-info">
+            <button class="accaunt-btn">J</button>
+            <div>
+                <p>Jasur Hakimov</p>
+                <p>@jasurhakimov007</p>
+                <a href="#">Manage your google accaunt</a>
+            </div>
+        </div>
+        <div class="accaunt-settings">
+            <ul>
+                <li>
+                    <i class="fa fa-address-card" aria-hidden="true"></i>
+                    <a href="#">Your channel</a>
+                </li>
+                <li>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <a href="#">Paid membership</a>
+                </li>
+                <li>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <a href="#">Switch account</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="accaunt-settings">
+            <ul>
+                <li>
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                    <a href="#">Upload music</a>
+                </li>
+                <li>
+                    <i class="fa fa-history" aria-hidden="true"></i>
+                    <a href="#">History</a>
+                </li>
+                <li>
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                    <a href="#">TermsPrivacy policy</a>
+                </li>
+                <li>
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <a href="#">Help</a>
+                </li>
+                <li>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <a href="#">Send feedback</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js">
+    </script>
+</body>
 </html>
